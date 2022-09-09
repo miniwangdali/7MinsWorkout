@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/mainScreenMainLayoutPadding"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_main_page"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/startFrameLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/item_circular_color_accent_border_ripple_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/defaultButtonTextSize"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bmiFrameLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/item_circular_color_accent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/historyFrameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startFrameLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/bmi"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/defaultButtonTextSize"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Calculator"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/defaultButtonTextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/bmiFrameLayout"
+        app:layout_constraintStart_toStartOf="@id/bmiFrameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/bmiFrameLayout" />
+
+    <FrameLayout
+        android:id="@+id/historyFrameLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/item_circular_color_accent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bmiFrameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/startFrameLayout">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_calendar"
+            android:contentDescription="@string/history"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/history"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/defaultButtonTextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/historyFrameLayout"
+        app:layout_constraintStart_toStartOf="@id/historyFrameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/historyFrameLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
